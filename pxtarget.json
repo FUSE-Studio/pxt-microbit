@@ -362,16 +362,12 @@
         "organizationLogo": "./static/Microsoft_logo_rgb_W-white_D-square.png",
         "organizationWideLogo": "./static/Microsoft_logo_rgb_W-white_D.png",
         "homeScreenHero": {
-            "imageUrl": "/static/herogallery/hero-banner.png",
-            "name": "Flashing Heart",
-            "url": "/projects/flashing-heart",
-            "description": "New? Start here!",
-            "cardType": "tutorial"
+            "imageUrl": "/static/herogallery/hero-banner.png"
         },
-        "homeScreenHeroGallery": "/hero-banner",
-        "homeUrl": "https://makecode.microbit.org/",
-        "embedUrl": "https://makecode.microbit.org/",
-        "shareUrl": "https://makecode.microbit.org/",
+        "homeScreenHeroGallery": "",
+        "homeUrl": "https://microbit.fusestudio.net/",
+        "embedUrl": "https://microbit.fusestudio.net/",
+        "shareUrl": "https://microbit.fusestudio.net/",
         "privacyUrl": "https://makecode.com/privacy",
         "termsOfUseUrl": "https://makecode.com/termsofuse",
         "githubUrl": "https://github.com/Microsoft/pxt-microbit",
