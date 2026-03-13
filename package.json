@@ -48,9 +48,15 @@
         "pxt-core": "8.2.6"
     },
     "overrides": {
-        "@types/ws": "^7.4.7"
+        "@types/ws": "^7.4.7",
+        "@types/react": "16.4.7",
+        "@types/react-dom": "16.0.3",
+        "csstype": "2.6.21"
     },
     "resolutions": {
-        "@types/ws": "^7.4.7"
+        "@types/ws": "^7.4.7",
+        "@types/react": "16.4.7",
+        "@types/react-dom": "16.0.3",
+        "csstype": "2.6.21"
     }
 }
