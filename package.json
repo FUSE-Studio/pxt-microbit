@@ -49,5 +49,8 @@
     },
     "overrides": {
         "@types/ws": "^7.4.7"
+    },
+    "resolutions": {
+        "@types/ws": "^7.4.7"
     }
 }
