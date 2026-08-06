@@ -1,0 +1,37 @@
+<!--
+    FUSE: shadows node_modules/pxt-core/docfiles/apptracking.html.
+
+    Upstream loads Microsoft's Application Insights SDK against a hardcoded
+    instrumentation key and beacons page views and tick events to
+    dc.services.visualstudio.com. That is telemetry about middle-schoolers
+    leaving a login-walled FUSE tool for a third party, so it is stubbed out
+    here rather than merely blocked: the FUSE CSP already refused the beacon,
+    which produced a console error on every tracked interaction.
+
+    The stub has to define window.appInsights, not just neutralise the loader —
+    pxtweb's aiTrackEvent/aiTrackException call window.appInsights.trackEvent
+    and .trackException with no guard, so leaving it undefined would throw on
+    every pxt.tickEvent.
+
+    Target docfiles take precedence over pxt-core's (see docfilesdirs in
+    pxt-core's server.ts), so this file wins with no patching of node_modules.
+-->
+<script type="text/javascript">
+    window.appInsights = {
+        trackEvent: function () { },
+        trackException: function () { },
+        trackPageView: function () { },
+        trackMetric: function () { },
+        trackTrace: function () { },
+        trackDependency: function () { },
+        flush: function () { }
+    };
+
+    // Upstream returns "is this a production release", which pxt uses to decide
+    // whether analytics may set cookies. Nothing is being collected, so false.
+    window.loadAppInsights = function () {
+        return false;
+    };
+
+    pxt.initAnalyticsAsync();
+</script>
